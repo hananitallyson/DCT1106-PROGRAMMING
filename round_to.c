@@ -1,11 +1,8 @@
 #include <stdio.h>
 
 float round_to(float number, int digits) {
-    if (number == 0) {
-        return 0;
-    }
-
     int factor = 1;
+
     for (int i = 0; i < digits; i++) {
         factor *= 10;
     }
@@ -14,18 +11,26 @@ float round_to(float number, int digits) {
     int integer = (int)scaled;
     float decimal = scaled - integer;
 
-    int rounded;
     if (decimal >= 0.5) {
-        rounded = integer + 1;
-    } else {
-        rounded = integer;
+        integer++;
     }
 
-    return rounded / (float)factor;
+    return integer / (float)factor;
 }
 
 int main() {
-    float result = round_to(14.256, 2);
-    printf("result: %g\n", result);
+    float number;
+    int digits;
+
+    printf("\nEnter a float number (e.g., 14.256): ");
+    scanf("%f", &number);
+
+    printf("Enter the number of decimal digits (e.g., 2): ");
+    scanf("%d", &digits);
+
+    float result = round_to(number, digits);
+
+    printf("%g -> %g\n", number, result);
+
     return 0;
 }
