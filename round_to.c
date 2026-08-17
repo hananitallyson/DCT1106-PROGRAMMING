@@ -19,18 +19,20 @@ float round_to(float number, int digits) {
 }
 
 int main() {
+    char input[100];
     float number;
     int digits;
 
     printf("\nEnter a float number (e.g., 14.256): ");
-    scanf("%f", &number);
+    scanf("%99s", input);
+    sscanf(input, "%f", &number);
 
     printf("Enter the number of decimal digits (e.g., 2): ");
     scanf("%d", &digits);
 
     float result = round_to(number, digits);
 
-    printf("%g -> %.*f\n", number, digits, result);
+    printf("%s -> %.*f\n", input, digits, result);
 
     return 0;
 }
