@@ -2,14 +2,17 @@
 
 float round_to(float number, int digits) {
     int factor = 1;
+    float scaled;
+    int integer;
+    float decimal;
 
     for (int i = 0; i < digits; i++) {
         factor *= 10;
     }
 
-    float scaled = number * factor;
-    int integer = (int)scaled;
-    float decimal = scaled - integer;
+    scaled = number * factor;
+    integer = (int)scaled;
+    decimal = scaled - integer;
 
     if (decimal >= 0.5) {
         integer++;
