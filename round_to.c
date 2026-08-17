@@ -30,7 +30,7 @@ int main() {
 
     float result = round_to(number, digits);
 
-    printf("%g -> %g\n", number, result);
+    printf("%g -> %.*f\n", number, digits, result);
 
     return 0;
 }
