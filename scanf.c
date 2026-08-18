@@ -5,7 +5,7 @@ int main(void) {
     int age;
 
     printf("\nEnter your name (e.g. Gabi): ");
-    scanf("%s", &name);
+    scanf("%[^\n]s", &name);
 
     printf("Enter your age (e.g. 20): ");
     scanf("%d", &age);
