@@ -32,7 +32,6 @@ int main() {
 
     float result = rounding(number, digits);
 
-    printf("%g -> %.*f\n", number, digits, result);
     printf("%s -> %.*f\n", input, digits, result);
 
     return 0;
