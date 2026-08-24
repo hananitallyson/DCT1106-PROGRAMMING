@@ -3,10 +3,10 @@
 int main() {
     int ivalue, jvalue, sum, sub, multi, div, remain;
 
-    printf("\nEnter the first value (e.g 5): ");
+    printf("\nEnter the first int value (e.g 5): ");
     scanf("%d", &ivalue);
 
-    printf("Enter the second value (e.g 2): ");
+    printf("Enter the second int value (e.g 2): ");
     scanf("%d", &jvalue);
 
     sum = ivalue + jvalue;
