@@ -11,10 +11,10 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 8; i++) {
         aux = arr[i];
         arr[i] = arr[7-i];
-        arr[7-i] = aux; 
+        arr[7-i] = aux;         
     }
     
     printf("\n");
